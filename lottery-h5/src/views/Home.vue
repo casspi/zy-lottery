@@ -1,18 +1,21 @@
 <template>
   <div style="text-align: center; margin-top: 40px">
+    <img class="logo" src="@/assets/logo.png" />
     <div style="display: flex; align-items: center; justify-content: center">
-      <h2>幸运大转盘抽奖</h2>
+      <h2 class="title">幸运大转盘抽奖</h2>
       <button
         v-if="result"
         style="text-align: right; margin-left: 20px"
         @click="showResult = true"
       >
-        我的奖品
+        查看奖品
       </button>
     </div>
+
     <div v-if="loading">加载奖品中...</div>
     <div v-else>
       <nutbig-turntable
+        v-if="prizes.length"
         class="turntable"
         ref="bingoRef"
         :prize-list="prizes"
@@ -25,7 +28,9 @@
         @end-turns="endTurns"
         :disabled="hasDrawn || spinning"
       />
+      <Empty v-else description="抱歉，奖品已抽完！" />
     </div>
+
     <div class="result-popup" v-if="showResult && result">
       <div class="result-popup-inner">
         <p>
@@ -46,7 +51,7 @@
 import { ref, onMounted, reactive } from "vue";
 import axios from "axios";
 import { sleep } from "@daysnap/utils";
-import { showToast } from "vant";
+import { showToast, Empty } from "vant";
 import { v4 as uuidv4 } from "uuid";
 
 const BASE_URL = "http://10.50.100.208:3000";
@@ -59,7 +64,7 @@ const hasDrawn = ref(false);
 const refOpenid = ref("");
 
 // 获取openid，优先从localStorage取，取不到再生成
-localStorage.setItem("zy_openid", "");
+// localStorage.setItem("zy_openid", "1");
 let openid = localStorage.getItem("zy_openid");
 if (!openid) {
   openid = uuidv4();
@@ -161,6 +166,21 @@ const startTurns = async () => {
 const bingoRef = ref();
 </script>
 <style scoped>
+.logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+.title {
+  color: #205299;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+}
+.prizes-over {
+  margin-top: 30px;
+  color: red;
+}
 .result-popup {
   position: fixed;
   left: 0;

@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"node ./index.js ",
-    "start": "rm -f prizes.json users.json && node index.js"
+    "dev": "node ./index.js ",
+    "start": "rm -f prizes.json users.json && node index.js",
+    "restart": "rm -f prizes.json && node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.9.0",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
   }
 }
