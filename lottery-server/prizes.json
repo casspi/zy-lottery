@@ -2,31 +2,31 @@
   {
     "id": 1,
     "prizeName": "植物盲袋",
-    "count": 4,
-    "prizeImg": "https://img14.360buyimg.com/imagetools/jfs/t1/104165/34/15186/96522/5e6f1435E46bc0cb0/d4e878a15bfd9362.png"
+    "count": 349,
+    "prizeImg": "/assets/1.jpg"
   },
   {
     "id": 2,
     "prizeName": "猫抓挠挠",
-    "count": 3,
-    "prizeImg": "https://img14.360buyimg.com/imagetools/jfs/t1/104165/34/15186/96522/5e6f1435E46bc0cb0/d4e878a15bfd9362.png"
+    "count": 200,
+    "prizeImg": "/assets/2.jpg"
   },
   {
     "id": 3,
     "prizeName": "旅行挎包",
-    "count": 2,
-    "prizeImg": "https://img14.360buyimg.com/imagetools/jfs/t1/104165/34/15186/96522/5e6f1435E46bc0cb0/d4e878a15bfd9362.png"
+    "count": 40,
+    "prizeImg": "/assets/3.jpg"
   },
   {
     "id": 4,
     "prizeName": "多功能小风扇",
-    "count": 5,
-    "prizeImg": "https://img14.360buyimg.com/imagetools/jfs/t1/104165/34/15186/96522/5e6f1435E46bc0cb0/d4e878a15bfd9362.png"
+    "count": 60,
+    "prizeImg": "/assets/4.jpg"
   },
   {
     "id": 5,
     "prizeName": "旅行洗漱包",
-    "count": 3,
-    "prizeImg": "https://img14.360buyimg.com/imagetools/jfs/t1/104165/34/15186/96522/5e6f1435E46bc0cb0/d4e878a15bfd9362.png"
+    "count": 80,
+    "prizeImg": "/assets/5.jpg"
   }
 ]
